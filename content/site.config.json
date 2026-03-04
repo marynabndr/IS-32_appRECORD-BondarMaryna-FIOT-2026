@@ -4,10 +4,10 @@
     "subjectLine": "з дисципліни «WEB-ОРІЄНТОВАНІ ТЕХНОЛОГІЇ. BACKEND РОЗРОБКИ»"
   },
   "student": {
-    "fullName": "Прізвище Ім’я По батькові",
-    "group": "Іx-xx",
-    "gender": "male",
-    "photo": "/students/chad.jpg"
+    "fullName": "Бондар Марина Михайлівна",
+    "group": "ІС-32",
+    "gender": "female",
+    "photo": "/students/photo1.jpg"
   },
   "toc": {
     "minDepth": 2,
