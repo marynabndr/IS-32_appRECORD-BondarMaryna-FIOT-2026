@@ -35,9 +35,9 @@
 
 - Reviews: зберігає зворотний зв'язок від студентів з оцінкою від 1 до 5.
 
-![таблиці](/static/assets/labs/lab-2/таблиці%20бд.jpg)
+![tables](/static/assets/labs/lab-2/tables.jpg)
 
-![структура_бд](/static/assets/labs/lab-2/структура%20бд.jpg)
+![structure](/static/assets/labs/lab-2/structure.jpg)
 
 ```
 CREATE TABLE Users (
@@ -136,7 +136,7 @@ SELECT
 FROM Courses
 JOIN Teachers ON Courses.teacherId = Teachers.id;
 ```
-![SELECT1](/static/assets/labs/lab-2/SELECT1.jpg)
+![select1](/static/assets/labs/lab-2/select1.jpg)
 
 Пошук курсів конкретної мови (WHERE)
 ```
@@ -144,7 +144,7 @@ SELECT title, level, price
 FROM Courses 
 WHERE language = 'English';
 ```
-![SELECT2](/static/assets/labs/lab-2/SELECT2.jpg)
+![select2](/static/assets/labs/lab-2/select2.jpg)
 
 Перегляд заявок із деталями курсу та клієнта
 ```
@@ -159,7 +159,7 @@ JOIN Users ON Applications.userId = Users.id
 JOIN Courses ON Applications.courseId = Courses.id;
 ```
 
-![SELECT3](/static/assets/labs/lab-2/SELECT3.jpg)
+![select3](/static/assets/labs/lab-2/select3.jpg)
 
     - UPDATE
    
@@ -171,7 +171,7 @@ SET price = 540.00,
 WHERE id = 2;
 ```
 
-![UPDATE1](/static/assets/labs/lab-2/UPDATE1.jpg)
+![update1](/static/assets/labs/lab-2/update1.jpg)
 
 Оновлення досвіду викладача
 
@@ -180,7 +180,7 @@ UPDATE Teachers
 SET experience = '9 років' 
 WHERE full_name = 'Олена Петренко';
 ```
-![UPDATE2](/static/assets/labs/lab-2/UPDATE2.jpg)
+![update2](/static/assets/labs/lab-2/update2.jpg)
 
     - DELETE 
 
@@ -190,8 +190,8 @@ WHERE full_name = 'Олена Петренко';
 DELETE FROM Reviews 
 WHERE id = 1;
 ```
-![DELETE1](/static/assets/labs/lab-2/DELETE1.jpg)
-![DELETE2](/static/assets/labs/lab-2/DELETE2.jpg)
+![delete1](/static/assets/labs/lab-2/delete1.jpg)
+![delete2](/static/assets/labs/lab-2/delete2.jpg)
 
 ## №4, 6. Підключити Node.js до MySQL через пакет mysql2. Використати ORM Sequelize
 
