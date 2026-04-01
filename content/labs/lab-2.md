@@ -17,8 +17,8 @@
 За допомогою інструментарію XAMPP (phpMyAdmin) було створено базу даних з назвою backend_globaltalk.
 
 
-![створення бд](/static/assets/labs/lab-2/db.jpg)
-![xampp](/static/assets/labs/lab-2/xampp.jpg)
+![створення бд](/assets/labs/lab-2/db.jpg)
+![xampp](/assets/labs/lab-2/xampp.jpg)
 
 
 ## №2. Створити таблиці у вашій базі даних.
@@ -35,9 +35,9 @@
 
 - Reviews: зберігає зворотний зв'язок від студентів з оцінкою від 1 до 5.
 
-![tables](/static/assets/labs/lab-2/tables.jpg)
+![tables](/assets/labs/lab-2/tables.jpg)
 
-![structure](/static/assets/labs/lab-2/structure.jpg)
+![structure](/assets/labs/lab-2/structure.jpg)
 
 ```
 CREATE TABLE Users (
@@ -136,7 +136,7 @@ SELECT
 FROM Courses
 JOIN Teachers ON Courses.teacherId = Teachers.id;
 ```
-![select1](/static/assets/labs/lab-2/select1.jpg)
+![select1](/assets/labs/lab-2/select1.jpg)
 
 Пошук курсів конкретної мови (WHERE)
 ```
@@ -144,7 +144,7 @@ SELECT title, level, price
 FROM Courses 
 WHERE language = 'English';
 ```
-![select2](/static/assets/labs/lab-2/select2.jpg)
+![select2](/assets/labs/lab-2/select2.jpg)
 
 Перегляд заявок із деталями курсу та клієнта
 ```
@@ -159,7 +159,7 @@ JOIN Users ON Applications.userId = Users.id
 JOIN Courses ON Applications.courseId = Courses.id;
 ```
 
-![select3](/static/assets/labs/lab-2/select3.jpg)
+![select3](/assets/labs/lab-2/select3.jpg)
 
     - UPDATE
    
@@ -171,7 +171,7 @@ SET price = 540.00,
 WHERE id = 2;
 ```
 
-![update1](/static/assets/labs/lab-2/update1.jpg)
+![update1](/assets/labs/lab-2/update1.jpg)
 
 Оновлення досвіду викладача
 
@@ -180,7 +180,7 @@ UPDATE Teachers
 SET experience = '9 років' 
 WHERE full_name = 'Олена Петренко';
 ```
-![update2](/static/assets/labs/lab-2/update2.jpg)
+![update2](/assets/labs/lab-2/update2.jpg)
 
     - DELETE 
 
@@ -190,8 +190,8 @@ WHERE full_name = 'Олена Петренко';
 DELETE FROM Reviews 
 WHERE id = 1;
 ```
-![delete1](/static/assets/labs/lab-2/delete1.jpg)
-![delete2](/static/assets/labs/lab-2/delete2.jpg)
+![delete1](/assets/labs/lab-2/delete1.jpg)
+![delete2](/assets/labs/lab-2/delete2.jpg)
 
 ## №4, 6. Підключити Node.js до MySQL через пакет mysql2. Використати ORM Sequelize
 
@@ -201,7 +201,7 @@ WHERE id = 1;
 
 Команда ```npm init -y``` автоматично створила файл ```package.json.```
 
-![task4](/static/assets/labs/lab-2/task4.jpg)
+![task4](/assets/labs/lab-2/task4.jpg)
 
 
 Команда ```npm install sequelize mysql2 express``` завантажила необхідні інструменти:
@@ -214,7 +214,7 @@ WHERE id = 1;
 
 Після виконання команди встановлення пакетів ```npm install```, менеджер пакетів автоматично сформував дерево залежностей у папці ```node_modules``` та створив файл ```package-lock.json``` для фіксації версій бібліотек. Це забезпечує цілісність та відтворюваність середовища розробки.
 
-![task4(1)](/static/assets/labs/lab-2/task4(1).jpg)
+![task4(1)](/assets/labs/lab-2/task4(1).jpg)
 
 **Конфігурація бази даних**
 
@@ -370,7 +370,7 @@ async function startServer() {
 
 startServer();
 ```
-![server](/static/assets/labs/lab-2/server.png)
+![server](/assets/labs/lab-2/server.png)
 
 
 ## №7,8. Створити моделі User та Course. Реалізувати зв’язок One-to-Many
@@ -520,7 +520,7 @@ async function demo() {
 demo();
 ```
 
-![test](/static/assets/labs/lab-2/test.jpg)
+![test](/assets/labs/lab-2/test.jpg)
 
 ## Висновки
 
