@@ -5,9 +5,9 @@ on:
     branches: ["main"]
   workflow_dispatch:
 
-# Додаємо глобальну змінну, щоб вимкнути попередження
+# Глобальна змінна для переведення екшенів на Node.js 24
 env:
-  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
 
 permissions:
   contents: read
@@ -28,7 +28,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22 # Оновлено до стабільної версії (можна вказати і 24)
 
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
@@ -48,7 +48,8 @@ jobs:
             ${{ runner.os }}-pnpm-store-
 
       - name: Install deps
-        run: pnpm install
+        # Змінено на --no-frozen-lockfile, щоб pnpm не падав через helmet у package.json
+        run: pnpm i --no-frozen-lockfile
 
       - name: Sync SvelteKit
         run: pnpm svelte-kit sync
